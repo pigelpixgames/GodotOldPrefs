@@ -1,0 +1,6 @@
+[submodule "PlistCpp"]
+	path = PlistCpp
+	url = https://github.com/animetrics/PlistCpp
+[submodule "winreg"]
+	path = winreg
+	url = https://github.com/alexsandrovp/winreg
