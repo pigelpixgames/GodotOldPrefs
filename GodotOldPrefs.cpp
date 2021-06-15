@@ -337,15 +337,15 @@ bool GodotOldPrefs::keyExists(String name) {
 }
 
 void GodotOldPrefs::_bind_methods() {
-    ObjectTypeDB::bind_method("setCredentials", &GodotOldPrefs::setCredentials);
-    ObjectTypeDB::bind_method("getInt", &GodotOldPrefs::getInt);
-    ObjectTypeDB::bind_method("getString", &GodotOldPrefs::getString);
-    ObjectTypeDB::bind_method("getFloat", &GodotOldPrefs::getFloat);
+    ClassDB::bind_method(D_METHOD("setCredentials", "CompanyName", "ProductName"), &GodotOldPrefs::setCredentials);
+    ClassDB::bind_method(D_METHOD("getInt", "IntName"), &GodotOldPrefs::getInt);
+    ClassDB::bind_method(D_METHOD("getString", "StringName"), &GodotOldPrefs::getString);
+    ClassDB::bind_method(D_METHOD("getFloat", "FloatName"), &GodotOldPrefs::getFloat);
 #if defined __APPLE__
-    ObjectTypeDB::bind_method("getFloatAsString", &GodotOldPrefs::getFloatAsString);
+    ClassDB::bind_method(D_METHOD("getFloatAsString", "FloatName"), &GodotOldPrefs::getFloatAsString);
 #endif
-    ObjectTypeDB::bind_method("getBool", &GodotOldPrefs::getBool);
-    ObjectTypeDB::bind_method("keyExists", &GodotOldPrefs::keyExists);
+    ClassDB::bind_method(D_METHOD("getBool", "BoolName"), &GodotOldPrefs::getBool);
+    ClassDB::bind_method(D_METHOD("keyExists", "KeyName"), &GodotOldPrefs::keyExists);
 }
 
 GodotOldPrefs::GodotOldPrefs() {

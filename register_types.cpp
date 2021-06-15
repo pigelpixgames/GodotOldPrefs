@@ -24,11 +24,11 @@ SOFTWARE.
 
 #include "register_types.h"
 
-#include "object_type_db.h"
+#include "core/class_db.h"
 #include "GodotOldPrefs.h"
 
 void register_GodotOldPrefs_types() {
-    ObjectTypeDB::register_type<GodotOldPrefs>();
+    ClassDB::register_class<GodotOldPrefs>();
 }
 
 void unregister_GodotOldPrefs_types() {

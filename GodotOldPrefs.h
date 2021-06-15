@@ -46,7 +46,7 @@ SOFTWARE.
 #endif
 
 class GodotOldPrefs : public Reference {
-    OBJ_TYPE(GodotOldPrefs, Reference);
+    GDCLASS(GodotOldPrefs, Reference);
     
     std::string companyName;
     std::string productName;
